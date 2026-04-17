@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:mobile_ai/vision_detector_views/face_detector_view.dart';
+import 'package:mobile_ai/vision_detector_views/face_mesh_detector_view.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -40,9 +41,9 @@ class Home extends StatelessWidget {
                     children: [
                       //CustomCard('Barcode Scanning', BarcodeScannerView()),
                       CustomCard('Face Detection', FaceDetectorView()),
-                      // if (Platform.isAndroid)
-                      //   CustomCard(
-                      //       'Face Mesh Detection', FaceMeshDetectorView()),
+                      if (Platform.isAndroid)
+                        CustomCard(
+                            'Face Mesh Detection', FaceMeshDetectorView()),
                       // CustomCard('Image Labeling', ImageLabelView()),
                       // CustomCard('Object Detection', ObjectDetectorView()),
                       // CustomCard('Text Recognition', TextRecognizerView()),
