@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:mobile_ai/vision_detector_views/barcode_scanner_view.dart';
 import 'package:mobile_ai/vision_detector_views/face_detector_view.dart';
 import 'package:mobile_ai/vision_detector_views/face_mesh_detector_view.dart';
+import 'package:mobile_ai/vision_detector_views/label_detector_view.dart';
 import 'package:mobile_ai/vision_detector_views/object_detector_view.dart';
 import 'package:mobile_ai/vision_detector_views/pose_detector_view.dart';
 import 'package:mobile_ai/vision_detector_views/selfie_segmenter_view.dart';
@@ -54,7 +55,7 @@ class Home extends StatelessWidget {
                           'Face Mesh Detection',
                           FaceMeshDetectorView(),
                         ),
-                      // CustomCard('Image Labeling', ImageLabelView()),
+                      CustomCard('Image Labeling', ImageLabelView()),
                       CustomCard('Object Detection', ObjectDetectorView()),
                       // CustomCard('Text Recognition', TextRecognizerView()),
                       // CustomCard('Text From Widget', TextFromWidgetView()),
