@@ -5,6 +5,8 @@ import 'package:mobile_ai/vision_detector_views/face_detector_view.dart';
 import 'package:mobile_ai/vision_detector_views/face_mesh_detector_view.dart';
 import 'package:mobile_ai/vision_detector_views/pose_detector_view.dart';
 
+import 'exercise_tracking/exercise_tracking_screen.dart';
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
@@ -15,8 +17,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'Exercise Tracker',
       debugShowCheckedModeBanner: false,
-      home: Home(),
+      //home: Home(),
+      home: ExerciseTrackingScreen(),
     );
   }
 }
