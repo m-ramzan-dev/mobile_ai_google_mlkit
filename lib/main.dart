@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:mobile_ai/vision_detector_views/face_detector_view.dart';
 import 'package:mobile_ai/vision_detector_views/face_mesh_detector_view.dart';
 import 'package:mobile_ai/vision_detector_views/pose_detector_view.dart';
+import 'package:mobile_ai/vision_detector_views/selfie_segmenter_view.dart';
 
 import 'exercise_tracking/exercise_tracking_screen.dart';
 
@@ -19,8 +20,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Exercise Tracker',
       debugShowCheckedModeBanner: false,
-      //home: Home(),
-      home: ExerciseTrackingScreen(),
+      home: Home(),
+      //home: ExerciseTrackingScreen(),
     );
   }
 }
@@ -48,14 +49,16 @@ class Home extends StatelessWidget {
                       CustomCard('Face Detection', FaceDetectorView()),
                       if (Platform.isAndroid)
                         CustomCard(
-                            'Face Mesh Detection', FaceMeshDetectorView()),
+                          'Face Mesh Detection',
+                          FaceMeshDetectorView(),
+                        ),
                       // CustomCard('Image Labeling', ImageLabelView()),
                       // CustomCard('Object Detection', ObjectDetectorView()),
                       // CustomCard('Text Recognition', TextRecognizerView()),
                       // CustomCard('Text From Widget', TextFromWidgetView()),
                       // CustomCard('Digital Ink Recognition', DigitalInkView()),
-                       CustomCard('Pose Detection', PoseDetectorView()),
-                      // CustomCard('Selfie Segmentation', SelfieSegmenterView()),
+                      CustomCard('Pose Detection', PoseDetectorView()),
+                      CustomCard('Selfie Segmentation', SelfieSegmenterView()),
                       // if (Platform.isAndroid)
                       //   CustomCard('Document Scanner', DocumentScannerView()),
                       // if (Platform.isAndroid)
@@ -63,9 +66,7 @@ class Home extends StatelessWidget {
                       //       'Subject Segmentation', SubjectSegmenterView())
                     ],
                   ),
-                  SizedBox(
-                    height: 20,
-                  ),
+                  SizedBox(height: 20),
                   // ExpansionTile(
                   //   title: const Text('Natural Language APIs'),
                   //   children: [
@@ -106,12 +107,18 @@ class CustomCard extends StatelessWidget {
         ),
         onTap: () {
           if (!featureCompleted) {
-            ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                content:
-                const Text('This feature has not been implemented yet')));
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(
+                content: const Text(
+                  'This feature has not been implemented yet',
+                ),
+              ),
+            );
           } else {
             Navigator.push(
-                context, MaterialPageRoute(builder: (context) => _viewPage));
+              context,
+              MaterialPageRoute(builder: (context) => _viewPage),
+            );
           }
         },
       ),
