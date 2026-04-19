@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:mobile_ai/vision_detector_views/face_detector_view.dart';
 import 'package:mobile_ai/vision_detector_views/face_mesh_detector_view.dart';
+import 'package:mobile_ai/vision_detector_views/pose_detector_view.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -49,7 +50,7 @@ class Home extends StatelessWidget {
                       // CustomCard('Text Recognition', TextRecognizerView()),
                       // CustomCard('Text From Widget', TextFromWidgetView()),
                       // CustomCard('Digital Ink Recognition', DigitalInkView()),
-                      // CustomCard('Pose Detection', PoseDetectorView()),
+                       CustomCard('Pose Detection', PoseDetectorView()),
                       // CustomCard('Selfie Segmentation', SelfieSegmenterView()),
                       // if (Platform.isAndroid)
                       //   CustomCard('Document Scanner', DocumentScannerView()),
