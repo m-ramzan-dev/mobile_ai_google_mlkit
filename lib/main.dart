@@ -9,6 +9,7 @@ import 'package:mobile_ai/vision_detector_views/label_detector_view.dart';
 import 'package:mobile_ai/vision_detector_views/object_detector_view.dart';
 import 'package:mobile_ai/vision_detector_views/pose_detector_view.dart';
 import 'package:mobile_ai/vision_detector_views/selfie_segmenter_view.dart';
+import 'package:mobile_ai/vision_detector_views/text_detector_view.dart';
 
 import 'exercise_tracking/exercise_tracking_screen.dart';
 
@@ -58,7 +59,7 @@ class Home extends StatelessWidget {
                         ),
                       CustomCard('Image Labeling', ImageLabelView()),
                       CustomCard('Object Detection', ObjectDetectorView()),
-                      // CustomCard('Text Recognition', TextRecognizerView()),
+                      CustomCard('Text Recognition', TextRecognizerView()),
                       // CustomCard('Text From Widget', TextFromWidgetView()),
                       // CustomCard('Digital Ink Recognition', DigitalInkView()),
                       CustomCard('Pose Detection', PoseDetectorView()),
