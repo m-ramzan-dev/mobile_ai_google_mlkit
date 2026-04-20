@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:mobile_ai/vision_detector_views/barcode_scanner_view.dart';
+import 'package:mobile_ai/vision_detector_views/document_scanner_view.dart';
 import 'package:mobile_ai/vision_detector_views/face_detector_view.dart';
 import 'package:mobile_ai/vision_detector_views/face_mesh_detector_view.dart';
 import 'package:mobile_ai/vision_detector_views/label_detector_view.dart';
@@ -62,8 +63,8 @@ class Home extends StatelessWidget {
                       // CustomCard('Digital Ink Recognition', DigitalInkView()),
                       CustomCard('Pose Detection', PoseDetectorView()),
                       CustomCard('Selfie Segmentation', SelfieSegmenterView()),
-                      // if (Platform.isAndroid)
-                      //   CustomCard('Document Scanner', DocumentScannerView()),
+                      if (Platform.isAndroid)
+                        CustomCard('Document Scanner', DocumentScannerView()),
                       // if (Platform.isAndroid)
                       //   CustomCard(
                       //       'Subject Segmentation', SubjectSegmenterView())
