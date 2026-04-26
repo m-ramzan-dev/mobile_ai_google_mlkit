@@ -264,14 +264,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.4.2"
-  google_mlkit_genai_speech_recognition:
-    dependency: "direct main"
-    description:
-      name: google_mlkit_genai_speech_recognition
-      sha256: "31c4dee58ad6ba866c165748461561a37fddb4f60ed47c836e791f911568a4f1"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.1.0"
   google_mlkit_image_labeling:
     dependency: "direct main"
     description:
@@ -280,6 +272,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.14.2"
+  google_mlkit_language_id:
+    dependency: "direct main"
+    description:
+      name: google_mlkit_language_id
+      sha256: "30fda2b81ae207c89639361f8a14f754c2877f9fda66a1114255e239235895d3"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.13.1"
   google_mlkit_object_detection:
     dependency: "direct main"
     description:

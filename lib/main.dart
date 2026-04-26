@@ -13,6 +13,7 @@ import 'package:mobile_ai/vision_detector_views/text_detector_view.dart';
 
 import 'exercise_tracking/exercise_tracking_screen.dart';
 import 'nlp_detector_views /smart_reply_view.dart';
+import 'nlp_detector_views/language_identifier_view.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -76,7 +77,7 @@ class Home extends StatelessWidget {
                   ExpansionTile(
                     title: const Text('Natural Language APIs'),
                     children: [
-                      //     CustomCard('Language ID', LanguageIdentifierView()),
+                      CustomCard('Language ID', LanguageIdentifierView()),
                       //     CustomCard(
                       //         'On-device Translation', LanguageTranslatorView()),
                       CustomCard('Smart Reply', SmartReplyView()),
